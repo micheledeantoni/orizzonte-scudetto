@@ -1,0 +1,144 @@
+export function formatProbability(probability) {
+  return `${(probability * 100).toFixed(probability * 100 % 1 === 0 ? 0 : 1)}%`
+}
+
+export function formatPoints(points) {
+  return Number.isInteger(points) ? `${points}` : `${points.toFixed(1)}`
+}
+
+export function formatSignedDelta(delta) {
+  const value = delta * 100
+  const display = value % 1 === 0 ? value.toFixed(0) : value.toFixed(1)
+  return `${delta >= 0 ? '+' : ''}${display} pp`
+}
+
+export function formatDateLabel(dateString) {
+  return new Intl.DateTimeFormat('it-IT', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  }).format(new Date(dateString))
+}
+
+export function buildEvolutionSeries(matchdays) {
+  const teamMap = new Map()
+
+  matchdays.forEach((matchday) => {
+    matchday.teams.forEach((team) => {
+      if (!teamMap.has(team.shortName)) {
+        teamMap.set(team.shortName, {
+          name: team.name,
+          shortName: team.shortName,
+          color: team.color ?? '#ffffff',
+          values: [],
+        })
+      }
+
+      teamMap.get(team.shortName).values.push({
+        matchdayId: matchday.id,
+        probability: team.probability,
+      })
+    })
+  })
+
+  return [...teamMap.values()]
+}
+
+export function getTeamDeltas(currentMatchday, previousMatchday) {
+  const deltas = new Map()
+
+  if (!previousMatchday) {
+    return deltas
+  }
+
+  currentMatchday.teams.forEach((team) => {
+    const previousTeam = previousMatchday.teams.find(
+      (candidate) => candidate.shortName === team.shortName,
+    )
+
+    if (previousTeam) {
+      deltas.set(team.shortName, team.probability - previousTeam.probability)
+    }
+  })
+
+  return deltas
+}
+
+export function buildUniverseParticles(teams, seed = 0) {
+  const universeCount = 100
+  const totalProbability = teams.reduce((sum, team) => sum + Math.max(team.probability, 0), 0) || 1
+  const normalizedTeams = teams.map((team) => ({
+    ...team,
+    normalizedProbability: Math.max(team.probability, 0) / totalProbability,
+  }))
+
+  const counts = normalizedTeams.map((team) => ({
+    ...team,
+    count: Math.floor(team.normalizedProbability * universeCount),
+  }))
+
+  let assignedCount = counts.reduce((total, team) => total + team.count, 0)
+  const sortedByRemainder = [...normalizedTeams]
+    .map((team) => ({
+      ...team,
+      remainder:
+        team.normalizedProbability * universeCount -
+        Math.floor(team.normalizedProbability * universeCount),
+    }))
+    .sort((firstTeam, secondTeam) => secondTeam.remainder - firstTeam.remainder)
+
+  let cursor = 0
+  while (assignedCount < universeCount && sortedByRemainder.length > 0) {
+    const shortName = sortedByRemainder[cursor % sortedByRemainder.length].shortName
+    const target = counts.find((team) => team.shortName === shortName)
+    target.count += 1
+    assignedCount += 1
+    cursor += 1
+  }
+
+  const particles = []
+  let particleIndex = 0
+
+  counts.forEach((team) => {
+    for (let order = 1; order <= team.count; order += 1) {
+      const angle = (particleIndex * 137.5 + seed * 11) % 360
+      const radius = 16 + ((particleIndex * 7.8 + seed * 5) % 36)
+      const x = 50 + Math.cos((angle * Math.PI) / 180) * radius
+      const y = 50 + Math.sin((angle * Math.PI) / 180) * (radius * 0.75)
+      const size = 8 + ((particleIndex + seed) % 8)
+
+      particles.push({
+        id: `${team.shortName}-${order}-${seed}`,
+        order,
+        teamName: team.name,
+        shortName: team.shortName,
+        color: team.color,
+        secondaryColor: team.secondaryColor,
+        logo: team.logo,
+        glow: `${team.color}66`,
+        probabilityLabel: formatProbability(team.probability),
+        x: Math.min(Math.max(x, 6), 94),
+        y: Math.min(Math.max(y, 8), 92),
+        size,
+        delay: (particleIndex % 10) * 0.35,
+      })
+
+      particleIndex += 1
+    }
+  })
+
+  return particles
+}
+
+export function getMatchdayIndexFromQuery(matchdays) {
+  const params = new URLSearchParams(window.location.search)
+  const matchdayId = Number(params.get('matchday'))
+  const index = matchdays.findIndex((matchday) => matchday.id === matchdayId)
+  return index >= 0 ? index : matchdays.length - 1
+}
+
+export function updateMatchdayQuery(matchdayId) {
+  const url = new URL(window.location.href)
+  url.searchParams.set('matchday', `${matchdayId}`)
+  window.history.replaceState({}, '', url)
+}

@@ -1,0 +1,64 @@
+{
+  "competition": "Serie A",
+  "season": "2025-26",
+  "hero": {
+    "title": "Orizzonte Scudetto",
+    "subtitle": "Ogni universo rappresenta un possibile finale di stagione. Piu universi controlla una squadra, piu e probabile che vinca il titolo."
+  },
+  "matchdays": [
+    {
+      "id": 28,
+      "label": "Dopo la 28a giornata",
+      "date": "2026-03-10",
+      "storyTitle": "Titolo opzionale della nota",
+      "note": "Testo editoriale opzionale sulla giornata.",
+      "summaryStats": [
+        {
+          "label": "Favorita principale",
+          "value": "Inter 54%"
+        },
+        {
+          "label": "Linea alta attesa",
+          "value": "84 punti"
+        }
+      ],
+      "teams": [
+        {
+          "name": "Inter",
+          "shortName": "INT",
+          "probability": 0.54,
+          "projectedPoints": 84,
+          "color": "#6EC5FF",
+          "secondaryColor": "#111111",
+          "logo": "/logos/inter.svg"
+        },
+        {
+          "name": "Napoli",
+          "shortName": "NAP",
+          "probability": 0.31,
+          "projectedPoints": 81,
+          "color": "#244BFF",
+          "secondaryColor": "#9FC4FF",
+          "logo": "/logos/napoli.svg"
+        },
+        {
+          "name": "Juventus",
+          "shortName": "JUV",
+          "probability": 0.1,
+          "projectedPoints": 78,
+          "color": "#E6EDF7",
+          "logo": "/logos/juventus.svg"
+        },
+        {
+          "name": "Milan",
+          "shortName": "MIL",
+          "probability": 0.05,
+          "projectedPoints": 76,
+          "color": "#FF6B6B",
+          "secondaryColor": "#111111",
+          "logo": "/logos/milan.svg"
+        }
+      ]
+    }
+  ]
+}

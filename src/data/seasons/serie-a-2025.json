@@ -1,0 +1,129 @@
+{
+  "competition": "Serie A",
+  "season": "2025-26",
+  "hero": {
+    "title": "Orizzonte Scudetto",
+    "subtitle": "Ogni universo rappresenta un possibile finale di stagione. Piu universi controlla una squadra, piu e probabile che vinca il titolo."
+  },
+  "matchdays": [
+    {
+      "id": 28,
+      "label": "Dopo la 28a giornata",
+      "date": "2026-03-10",
+      "storyTitle": "Derby e narrativa riaperta",
+      "note": "Il derby riapre il dibattito, ma i numeri restano dalla parte dell'Inter. Il modello continua a vedere una netta differenza strutturale.",
+      "summaryStats": [
+        { "label": "Favorita principale", "value": "Inter 96%" },
+        { "label": "Linea alta attesa", "value": "88 punti" }
+      ],
+      "teams": [
+        {
+          "name": "Inter",
+          "shortName": "INT",
+          "probability": 0.965,
+          "projectedPoints": 88,
+          "pointsCI95": [80, 93],
+          "color": "#6EC5FF",
+          "secondaryColor": "#111111",
+          "logo": "/logos/inter.svg"
+        },
+        {
+          "name": "Milan",
+          "shortName": "MIL",
+          "probability": 0.035,
+          "projectedPoints": 78,
+          "pointsCI95": [69, 84],
+          "color": "#FF6E6E",
+          "secondaryColor": "#111111",
+          "logo": "/logos/milan.svg"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "label": "Dopo la 29a giornata",
+      "date": "2026-03-17",
+      "storyTitle": "Swing favorevole all'Inter",
+      "note": "Il pareggio dell'Inter pesa poco, ma la sconfitta del Milan allarga di nuovo il gap. Il Napoli rientra nella conversazione, ma resta dietro nei numeri.",
+      "summaryStats": [
+        { "label": "Favorita principale", "value": "Inter 97.8%" },
+        { "label": "Linea alta attesa", "value": "87 punti" }
+      ],
+      "teams": [
+        {
+          "name": "Inter",
+          "shortName": "INT",
+          "probability": 0.978,
+          "projectedPoints": 87,
+          "pointsCI95": [80, 93],
+          "color": "#6EC5FF",
+          "secondaryColor": "#111111",
+          "logo": "/logos/inter.svg"
+        },
+        {
+          "name": "Milan",
+          "shortName": "MIL",
+          "probability": 0.022,
+          "projectedPoints": 77,
+          "pointsCI95": [69, 84],
+          "color": "#FF6E6E",
+          "secondaryColor": "#111111",
+          "logo": "/logos/milan.svg"
+        },
+        {
+          "name": "Napoli",
+          "shortName": "NAP",
+          "probability": 0.005,
+          "projectedPoints": 74,
+          "pointsCI95": [66, 81],
+          "color": "#244BFF",
+          "secondaryColor": "#9FC4FF",
+          "logo": "/logos/napoli.svg"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "label": "Dopo la 30a giornata",
+      "date": "2026-03-22",
+      "storyTitle": "Corsa a tre, ma solo sulla carta",
+      "note": "Milan e Napoli accorciano leggermente, ma il modello continua a vedere l'Inter dominante per qualita e calendario residuo.",
+      "summaryStats": [
+        { "label": "Favorita principale", "value": "Inter 94.8%" },
+        { "label": "Linea alta attesa", "value": "86 punti" }
+      ],
+      "teams": [
+        {
+          "name": "Inter",
+          "shortName": "INT",
+          "probability": 0.948,
+          "projectedPoints": 86,
+          "pointsCI95": [79, 91],
+          "color": "#6EC5FF",
+          "secondaryColor": "#111111",
+          "logo": "/logos/inter.svg"
+        },
+        {
+          "name": "Milan",
+          "shortName": "MIL",
+          "probability": 0.04,
+          "projectedPoints": 77,
+          "pointsCI95": [70, 84],
+          "color": "#FF6E6E",
+          "secondaryColor": "#111111",
+          "logo": "/logos/milan.svg"
+        },
+        {
+          "name": "Napoli",
+          "shortName": "NAP",
+          "probability": 0.012,
+          "projectedPoints": 75,
+          "pointsCI95": [68, 82],
+          "color": "#244BFF",
+          "secondaryColor": "#9FC4FF",
+          "logo": "/logos/napoli.svg"
+        }
+      ]
+    }
+  ]
+}
