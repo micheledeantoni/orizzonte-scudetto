@@ -34,15 +34,9 @@ function MultiverseView({ particles, teams }) {
             type="button"
             className="universe-particle"
             style={{
-              left: `${particle.x}%`,
-              top: `${particle.y}%`,
-              width: `${particle.size}px`,
-              height: `${particle.size}px`,
               background: particle.secondaryColor
                 ? `linear-gradient(135deg, ${particle.color} 0 58%, ${particle.secondaryColor} 58% 100%)`
                 : particle.color,
-              boxShadow: `0 0 0.9rem ${particle.glow}`,
-              animationDelay: `${particle.delay}s`,
             }}
             onMouseEnter={(event) => {
               setActiveParticleId(particle.id)
@@ -77,7 +71,9 @@ function MultiverseView({ particles, teams }) {
               ) : null}
               <div className="multiverse-tooltip-copy">
                 <strong>{activeParticle.teamName}</strong>
-                <span>{activeParticle.probabilityLabel}</span>
+                <span>
+                  {activeParticle.probabilityLabel} • {activeParticle.shareLabel}
+                </span>
               </div>
             </div>
           </div>
@@ -93,10 +89,7 @@ function MultiverseView({ particles, teams }) {
             ) : null}
             <h3>{activeParticle.teamName}</h3>
             <p className="universe-probability">{activeParticle.probabilityLabel}</p>
-            <p className="section-copy">
-              Questo mondo appartiene a {activeParticle.teamName}. Nello snapshot corrente controlla{' '}
-              {activeParticle.probabilityLabel} del multiverso scudetto.
-            </p>
+            <p className="section-copy">{activeParticle.narrative}</p>
           </div>
         ) : null}
 

@@ -65,7 +65,7 @@ export function getTeamDeltas(currentMatchday, previousMatchday) {
 }
 
 export function buildUniverseParticles(teams, seed = 0) {
-  const universeCount = 100
+  const universeCount = 1000
   const totalProbability = teams.reduce((sum, team) => sum + Math.max(team.probability, 0), 0) || 1
   const normalizedTeams = teams.map((team) => ({
     ...team,
@@ -101,12 +101,6 @@ export function buildUniverseParticles(teams, seed = 0) {
 
   counts.forEach((team) => {
     for (let order = 1; order <= team.count; order += 1) {
-      const angle = (particleIndex * 137.5 + seed * 11) % 360
-      const radius = 16 + ((particleIndex * 7.8 + seed * 5) % 36)
-      const x = 50 + Math.cos((angle * Math.PI) / 180) * radius
-      const y = 50 + Math.sin((angle * Math.PI) / 180) * (radius * 0.75)
-      const size = 8 + ((particleIndex + seed) % 8)
-
       particles.push({
         id: `${team.shortName}-${order}-${seed}`,
         order,
@@ -115,19 +109,35 @@ export function buildUniverseParticles(teams, seed = 0) {
         color: team.color,
         secondaryColor: team.secondaryColor,
         logo: team.logo,
-        glow: `${team.color}66`,
+        narrative: team.universeNarrative,
+        shareLabel: `${team.count} / ${universeCount} universi`,
         probabilityLabel: formatProbability(team.probability),
-        x: Math.min(Math.max(x, 6), 94),
-        y: Math.min(Math.max(y, 8), 92),
-        size,
-        delay: (particleIndex % 10) * 0.35,
       })
 
       particleIndex += 1
     }
   })
 
-  return particles
+  return shuffleParticles(particles, seed)
+}
+
+function shuffleParticles(particles, seed) {
+  const shuffledParticles = [...particles]
+  let state = (seed || 1) * 2147483647
+
+  const nextRandom = () => {
+    state = (state * 48271) % 2147483647
+    return state / 2147483647
+  }
+
+  for (let index = shuffledParticles.length - 1; index > 0; index -= 1) {
+    const randomIndex = Math.floor(nextRandom() * (index + 1))
+    const currentParticle = shuffledParticles[index]
+    shuffledParticles[index] = shuffledParticles[randomIndex]
+    shuffledParticles[randomIndex] = currentParticle
+  }
+
+  return shuffledParticles
 }
 
 export function getMatchdayIndexFromQuery(matchdays) {

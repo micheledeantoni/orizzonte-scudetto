@@ -30,6 +30,7 @@
           "projectedPoints": 84,
           "color": "#6EC5FF",
           "secondaryColor": "#111111",
+          "universeNarrative": "Testo opzionale per descrivere cosa succede in questo universo se vince l'Inter.",
           "logo": "/logos/inter.svg"
         },
         {
@@ -39,6 +40,7 @@
           "projectedPoints": 81,
           "color": "#244BFF",
           "secondaryColor": "#9FC4FF",
+          "universeNarrative": "Testo opzionale per descrivere cosa succede in questo universo se vince il Napoli.",
           "logo": "/logos/napoli.svg"
         },
         {
@@ -56,6 +58,7 @@
           "projectedPoints": 76,
           "color": "#FF6B6B",
           "secondaryColor": "#111111",
+          "universeNarrative": "Testo opzionale per descrivere cosa succede in questo universo se vince il Milan.",
           "logo": "/logos/milan.svg"
         }
       ]

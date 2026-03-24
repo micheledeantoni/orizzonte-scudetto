@@ -96,10 +96,10 @@ function App() {
           <div className="section-heading section-heading-featured">
             <div>
               <p className="eyebrow">Il Multiverso</p>
-              <h2>100 universi, un solo scudetto</h2>
+              <h2>1000 universi, un solo scudetto</h2>
             </div>
             <p className="section-copy">
-              Ogni particella rappresenta un possibile finale di stagione. Passa sopra o tocca un
+              Ogni tessera rappresenta un possibile finale di stagione. Passa sopra o tocca un
               universo per vedere quale squadra controlla quel mondo.
             </p>
           </div>
@@ -154,6 +154,10 @@ function App() {
             </section>
           </div>
         </section>
+
+        <footer className="site-footer">
+          <p>Created by Michele Deantoni @macnonesiste</p>
+        </footer>
       </main>
     </div>
   )

@@ -25,6 +25,7 @@
           "pointsCI95": [80, 93],
           "color": "#6EC5FF",
           "secondaryColor": "#111111",
+          "universeNarrative": "In questo universo l'Inter conquista il ventunesimo scudetto: dal 1930 non chiuderebbe con due titoli in piu del Milan.",
           "logo": "/logos/inter.svg"
         },
         {
@@ -35,6 +36,7 @@
           "pointsCI95": [69, 84],
           "color": "#FF6E6E",
           "secondaryColor": "#111111",
+          "universeNarrative": "In questo universo il Milan vince il ventesimo scudetto, raggiunge l'Inter e si prende la seconda stella.",
           "logo": "/logos/milan.svg"
         }
       ]
@@ -58,6 +60,7 @@
           "pointsCI95": [80, 93],
           "color": "#6EC5FF",
           "secondaryColor": "#111111",
+          "universeNarrative": "In questo universo l'Inter conquista il ventunesimo scudetto: dal 1930 non chiuderebbe con due titoli in piu del Milan.",
           "logo": "/logos/inter.svg"
         },
         {
@@ -68,6 +71,7 @@
           "pointsCI95": [69, 84],
           "color": "#FF6E6E",
           "secondaryColor": "#111111",
+          "universeNarrative": "In questo universo il Milan vince il ventesimo scudetto, raggiunge l'Inter e si prende la seconda stella.",
           "logo": "/logos/milan.svg"
         },
         {
@@ -78,6 +82,7 @@
           "pointsCI95": [66, 81],
           "color": "#244BFF",
           "secondaryColor": "#9FC4FF",
+          "universeNarrative": "In questo universo il Napoli vince il terzo scudetto e si conferma come una delle squadre piu titolate dell'ultimo decennio.",
           "logo": "/logos/napoli.svg"
         }
       ]
@@ -101,6 +106,7 @@
           "pointsCI95": [79, 91],
           "color": "#6EC5FF",
           "secondaryColor": "#111111",
+          "universeNarrative": "In questo universo l'Inter conquista il ventunesimo scudetto: dal 1930 non chiuderebbe con due titoli in piu del Milan.",
           "logo": "/logos/inter.svg"
         },
         {
@@ -111,6 +117,7 @@
           "pointsCI95": [70, 84],
           "color": "#FF6E6E",
           "secondaryColor": "#111111",
+          "universeNarrative": "In questo universo il Milan vince il ventesimo scudetto, raggiunge l'Inter e si prende la seconda stella.",
           "logo": "/logos/milan.svg"
         },
         {
@@ -121,6 +128,7 @@
           "pointsCI95": [68, 82],
           "color": "#244BFF",
           "secondaryColor": "#9FC4FF",
+          "universeNarrative": "In questo universo il Napoli vince il terzo scudetto e si conferma come una delle squadre piu titolate dell'ultimo decennio.",
           "logo": "/logos/napoli.svg"
         }
       ]
