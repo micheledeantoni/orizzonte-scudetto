@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 import Hero from './components/Hero'
 import MatchdaySelector from './components/MatchdaySelector'
 import MultiverseView from './components/MultiverseView'
@@ -159,6 +160,7 @@ function App() {
           <p>Created by Michele Deantoni @macnonesiste</p>
         </footer>
       </main>
+      <Analytics />
     </div>
   )
 }
