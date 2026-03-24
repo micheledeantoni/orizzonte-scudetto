@@ -11,9 +11,10 @@ function MultiverseView({ particles, teams }) {
   )
 
   const updateTooltipPosition = (event) => {
-    const bounds = event.currentTarget.getBoundingClientRect()
-    const x = ((event.clientX - bounds.left) / bounds.width) * 100
-    const y = ((event.clientY - bounds.top) / bounds.height) * 100
+    const stageBounds = event.currentTarget.parentElement.getBoundingClientRect()
+    const tileBounds = event.currentTarget.getBoundingClientRect()
+    const x = ((tileBounds.left + tileBounds.width / 2 - stageBounds.left) / stageBounds.width) * 100
+    const y = ((tileBounds.top + tileBounds.height / 2 - stageBounds.top) / stageBounds.height) * 100
     setTooltipPosition({
       x: Math.min(Math.max(x, 10), 90),
       y: Math.min(Math.max(y, 12), 88),
@@ -42,9 +43,14 @@ function MultiverseView({ particles, teams }) {
               setActiveParticleId(particle.id)
               updateTooltipPosition(event)
             }}
-            onMouseMove={updateTooltipPosition}
-            onFocus={() => setActiveParticleId(particle.id)}
-            onClick={() => setActiveParticleId(particle.id)}
+            onFocus={(event) => {
+              setActiveParticleId(particle.id)
+              updateTooltipPosition(event)
+            }}
+            onClick={(event) => {
+              setActiveParticleId(particle.id)
+              updateTooltipPosition(event)
+            }}
             title={`${particle.teamName} • ${particle.probabilityLabel}`}
             aria-label={`${particle.teamName} universo ${particle.order}`}
           />

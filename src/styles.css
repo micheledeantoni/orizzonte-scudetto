@@ -183,8 +183,7 @@ button {
 }
 
 .ghost-button:hover:not(:disabled),
-.team-toggle:hover,
-.universe-particle:hover {
+.team-toggle:hover {
   transform: translateY(-1px);
 }
 
@@ -300,17 +299,18 @@ button {
   opacity: 0.98;
   box-shadow: inset 0 0 0 1px rgba(255, 252, 247, 0.12);
   transition:
-    transform 180ms ease,
+    filter 140ms ease,
     box-shadow 180ms ease,
     background 600ms ease;
 }
 
 .universe-particle:hover,
 .universe-particle:focus-visible {
-  transform: scale(1.75);
+  filter: brightness(1.08) saturate(1.06);
   box-shadow:
+    inset 0 0 0 1px rgba(255, 252, 247, 0.28),
     0 0 0 2px rgba(255, 252, 247, 0.95),
-    0 0 1rem rgba(88, 74, 52, 0.18) !important;
+    0 0 0.7rem rgba(88, 74, 52, 0.14) !important;
   z-index: 2;
 }
 
