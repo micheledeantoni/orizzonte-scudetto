@@ -132,6 +132,53 @@
           "logo": "/logos/napoli.svg"
         }
       ]
+    },
+    {
+      "id": 31,
+      "label": "Dopo la 31a giornata",
+      "date": "2026-04-07",
+      "storyTitle": "L'Inter si avvicina al traguardo",
+      "note": "L'aggiornamento del 7 aprile 2026 spinge l'Inter dentro una fascia ancora piu dominante del multiverso. Napoli e Milan restano vivi solo in una piccola porzione di universi, mentre la proiezione punti nerazzurra sale fino a 89.3.",
+      "summaryStats": [
+        { "label": "Favorita principale", "value": "Inter 97.8%" },
+        { "label": "Punti attesi", "value": "89.3" },
+        { "label": "Seconda forza", "value": "Napoli 1.3%" }
+      ],
+      "teams": [
+        {
+          "name": "Inter",
+          "shortName": "INT",
+          "probability": 0.978,
+          "projectedPoints": 89.3,
+          "pointsCI95": [82, 94],
+          "color": "#6EC5FF",
+          "secondaryColor": "#111111",
+          "universeNarrative": "In questo universo l'Inter conquista il ventunesimo scudetto: dal 1930 non chiuderebbe con due titoli in piu del Milan.",
+          "logo": "/logos/inter.svg"
+        },
+        {
+          "name": "Napoli",
+          "shortName": "NAP",
+          "probability": 0.013,
+          "projectedPoints": 78.4,
+          "pointsCI95": [72, 85],
+          "color": "#244BFF",
+          "secondaryColor": "#9FC4FF",
+          "universeNarrative": "In questo universo il Napoli vince il terzo scudetto e si conferma come una delle squadre piu titolate dell'ultimo decennio.",
+          "logo": "/logos/napoli.svg"
+        },
+        {
+          "name": "Milan",
+          "shortName": "MIL",
+          "probability": 0.008,
+          "projectedPoints": 77.7,
+          "pointsCI95": [70, 84],
+          "color": "#FF6E6E",
+          "secondaryColor": "#111111",
+          "universeNarrative": "In questo universo il Milan vince il ventesimo scudetto, raggiunge l'Inter e si prende la seconda stella.",
+          "logo": "/logos/milan.svg"
+        }
+      ]
     }
   ]
 }
