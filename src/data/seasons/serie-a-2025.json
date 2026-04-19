@@ -226,6 +226,53 @@
           "logo": "/logos/milan.svg"
         }
       ]
+    },
+    {
+      "id": 33,
+      "label": "Dopo la 33a giornata",
+      "date": "2026-04-19",
+      "storyTitle": "Quasi tutto il mosaico e nerazzurro",
+      "note": "L'aggiornamento del 19 aprile 2026 spinge l'Inter al 99.7% e alza ancora la proiezione punti fino a 94.6. Milan e Napoli rimangono soltanto in una frazione minima del mosaico, con scenari ormai quasi solo teorici.",
+      "summaryStats": [
+        { "label": "Favorita principale", "value": "Inter 99.7%" },
+        { "label": "Punti attesi", "value": "94.6" },
+        { "label": "Seconda forza", "value": "Milan 0.2%" }
+      ],
+      "teams": [
+        {
+          "name": "Inter",
+          "shortName": "INT",
+          "probability": 0.997,
+          "projectedPoints": 94.6,
+          "pointsCI95": [88, 100],
+          "color": "#6EC5FF",
+          "secondaryColor": "#111111",
+          "universeNarrative": "In questo universo l'Inter conquista il ventunesimo scudetto: dal 1930 non chiuderebbe con due titoli in piu del Milan.",
+          "logo": "/logos/inter.svg"
+        },
+        {
+          "name": "Milan",
+          "shortName": "MIL",
+          "probability": 0.002,
+          "projectedPoints": 80.7,
+          "pointsCI95": [73, 87],
+          "color": "#FF6E6E",
+          "secondaryColor": "#111111",
+          "universeNarrative": "In questo universo il Milan vince il ventesimo scudetto, raggiunge l'Inter e si prende la seconda stella.",
+          "logo": "/logos/milan.svg"
+        },
+        {
+          "name": "Napoli",
+          "shortName": "NAP",
+          "probability": 0.001,
+          "projectedPoints": 78.9,
+          "pointsCI95": [72, 85],
+          "color": "#244BFF",
+          "secondaryColor": "#9FC4FF",
+          "universeNarrative": "In questo universo il Napoli vince il terzo scudetto e si conferma come una delle squadre piu titolate dell'ultimo decennio.",
+          "logo": "/logos/napoli.svg"
+        }
+      ]
     }
   ]
 }
