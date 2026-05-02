@@ -273,6 +273,53 @@
           "logo": "/logos/napoli.svg"
         }
       ]
+    },
+    {
+      "id": 34,
+      "label": "Snapshot del 2 maggio 2026",
+      "date": "2026-05-02",
+      "storyTitle": "Controllo quasi immobile, con un piccolo segnale dal Napoli",
+      "note": "Questa non e una nuova simulazione Understat completa, ma una stima semplificata costruita a partire dallo snapshot del 19 aprile 2026. Ho imposto soltanto Napoli vincente e Inter e Milan pari, aggiornando i punti correnti e rimuovendo una gara residua per ciascuna squadra. Il risultato lascia l'Inter sostanzialmente immobile al centro del mosaico, con un lieve rialzo del Napoli e un piccolo arretramento del Milan.",
+      "summaryStats": [
+        { "label": "Favorita principale", "value": "Inter 99.7%" },
+        { "label": "Punti attesi", "value": "94.2" },
+        { "label": "Tipo di update", "value": "Stima semplificata" }
+      ],
+      "teams": [
+        {
+          "name": "Inter",
+          "shortName": "INT",
+          "probability": 0.997,
+          "projectedPoints": 94.2,
+          "pointsCI95": [89, 100],
+          "color": "#6EC5FF",
+          "secondaryColor": "#111111",
+          "universeNarrative": "In questo universo l'Inter conquista il ventunesimo scudetto: dal 1930 non chiuderebbe con due titoli in piu del Milan.",
+          "logo": "/logos/inter.svg"
+        },
+        {
+          "name": "Napoli",
+          "shortName": "NAP",
+          "probability": 0.002,
+          "projectedPoints": 80.9,
+          "pointsCI95": [74, 87],
+          "color": "#244BFF",
+          "secondaryColor": "#9FC4FF",
+          "universeNarrative": "In questo universo il Napoli vince il terzo scudetto e si conferma come una delle squadre piu titolate dell'ultimo decennio.",
+          "logo": "/logos/napoli.svg"
+        },
+        {
+          "name": "Milan",
+          "shortName": "MIL",
+          "probability": 0.001,
+          "projectedPoints": 80.0,
+          "pointsCI95": [74, 86],
+          "color": "#FF6E6E",
+          "secondaryColor": "#111111",
+          "universeNarrative": "In questo universo il Milan vince il ventesimo scudetto, raggiunge l'Inter e si prende la seconda stella.",
+          "logo": "/logos/milan.svg"
+        }
+      ]
     }
   ]
 }
