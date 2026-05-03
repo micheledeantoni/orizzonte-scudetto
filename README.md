@@ -16,7 +16,13 @@ npm install
 npm run dev
 ```
 
-3. Build for production:
+3. If you want to preview it from a local server before deploying, expose Vite on localhost and open the URL shown in terminal:
+
+```bash
+npm run dev -- --host 127.0.0.1
+```
+
+4. Build for production:
 
 ```bash
 npm run build

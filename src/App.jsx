@@ -6,6 +6,7 @@ import MultiverseView from './components/MultiverseView'
 import TeamTable from './components/TeamTable'
 import EvolutionChart from './components/EvolutionChart'
 import NarrativeNote from './components/NarrativeNote'
+import FinaleCelebration from './components/FinaleCelebration'
 import seasonData from './data/seasons/serie-a-2025.json'
 import {
   buildEvolutionSeries,
@@ -24,6 +25,8 @@ function App() {
 
   const selectedMatchday = season.matchdays[selectedIndex]
   const previousMatchday = selectedIndex > 0 ? season.matchdays[selectedIndex - 1] : null
+  const championTeam = selectedMatchday.teams.find((team) => team.probability === 1) ?? null
+  const showCelebration = Boolean(selectedMatchday.celebration && championTeam)
 
   const rankedTeams = useMemo(() => {
     const deltas = getTeamDeltas(selectedMatchday, previousMatchday)
@@ -92,6 +95,13 @@ function App() {
             onSelectIndex={handleSelectIndex}
           />
         </section>
+
+        {showCelebration ? (
+          <FinaleCelebration
+            celebration={selectedMatchday.celebration}
+            team={championTeam}
+          />
+        ) : null}
 
         <section className="card multiverse-card">
           <div className="section-heading section-heading-featured">

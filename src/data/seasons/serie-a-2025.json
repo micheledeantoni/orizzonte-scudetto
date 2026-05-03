@@ -320,6 +320,59 @@
           "logo": "/logos/milan.svg"
         }
       ]
+    },
+    {
+      "id": 35,
+      "label": "Dopo la 35a giornata",
+      "date": "2026-05-03",
+      "storyTitle": "Ventuno volte campioni d'Italia",
+      "note": "Il mosaico si chiude tutto in nerazzurro. Questo ultimo aggiornamento del 3 maggio 2026 consegna all'Inter il 100% della probabilita titolo e celebra il ventunesimo scudetto come saluto finale di Orizzonte Scudetto.",
+      "summaryStats": [
+        { "label": "Favorita principale", "value": "Inter 100%" },
+        { "label": "Esito finale", "value": "Scudetto assegnato" },
+        { "label": "Ultimo update", "value": "Chiusura del progetto" }
+      ],
+      "celebration": {
+        "eyebrow": "Gran finale",
+        "title": "L'Inter per la ventunesima volta campione d'Italia",
+        "message": "Questa e l'ultima giornata in cui Orizzonte Scudetto restera disponibile in questa forma. Grazie a tutte le persone che hanno seguito, commentato e condiviso il progetto lungo la corsa.",
+        "thanks": "Un grazie speciale a tutti quelli che sono intervenuti, con idee, feedback e tifo, settimana dopo settimana."
+      },
+      "teams": [
+        {
+          "name": "Inter",
+          "shortName": "INT",
+          "probability": 1,
+          "projectedPoints": 95.4,
+          "pointsCI95": [95.4, 95.4],
+          "color": "#6EC5FF",
+          "secondaryColor": "#111111",
+          "universeNarrative": "In questo universo, che ormai coincide con tutti gli altri, l'Inter conquista il ventunesimo scudetto e chiude definitivamente la corsa.",
+          "logo": "/logos/inter.svg"
+        },
+        {
+          "name": "Napoli",
+          "shortName": "NAP",
+          "probability": 0,
+          "projectedPoints": 80.1,
+          "pointsCI95": [80.1, 80.1],
+          "color": "#244BFF",
+          "secondaryColor": "#9FC4FF",
+          "universeNarrative": "Il Napoli resta la principale inseguitrice nella fotografia conclusiva, ma fuori da ogni universo vincente.",
+          "logo": "/logos/napoli.svg"
+        },
+        {
+          "name": "Milan",
+          "shortName": "MIL",
+          "probability": 0,
+          "projectedPoints": 78.9,
+          "pointsCI95": [78.9, 78.9],
+          "color": "#FF6E6E",
+          "secondaryColor": "#111111",
+          "universeNarrative": "Il Milan esce definitivamente dal mosaico finale e chiude la corsa senza universi residui.",
+          "logo": "/logos/milan.svg"
+        }
+      ]
     }
   ]
 }
